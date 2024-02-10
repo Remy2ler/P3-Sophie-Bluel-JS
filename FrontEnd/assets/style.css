@@ -1,0 +1,598 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** end reset css**/
+body {
+	max-width: 1440px;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	background-color: #fffef8;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+}
+
+.edition {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	color: white;
+	height: 59px;
+}
+
+.edition p {
+	scale: 120%;
+}
+
+.ProjModif {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 92px;
+	margin-top: 140px;
+}
+
+.ProjModif h2 {
+	position: relative;
+	left: 379px;
+}
+
+.ProjModif a {
+	position: relative;
+	left: 410px;
+	display: none;
+}
+
+.modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+}
+
+#modalContent {
+	position: relative;
+}
+
+#croixModale {
+	position: absolute;
+	right: 30px;
+	top: 26px;
+	border: none;
+	background-color: #fff;
+}
+
+#btnRetour {
+	position: absolute;
+	left: 30px;
+	top: 26px;
+	border: none;
+	background-color: #fff;
+}
+
+.modalBody {
+	background-color: #fff;
+	max-width: 630px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+
+.modalBody p {
+	font-family: 'Work Sans';
+	font-size: 26px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.modalBody div {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 9px;
+	row-gap: 29px;
+	line-height: 0;
+	margin: 46px 105px 0 105px;
+	border-bottom: 1.5px solid #b3b3b3;
+	padding-bottom: 68px;
+}
+
+.modalBody figure {
+	width: calc(20% - 7.2px);
+	display: flex;
+}
+
+.modalBody figure a {
+	display: flex;
+	position: relative;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	right: 22px;
+	top: 6.5px;
+	height: 17px;
+	width: 17px;
+	background-color: black;
+	border-radius: 2px;
+}
+
+.modalBody figure a i {
+	color: white;
+	scale: 74%;
+	padding: 4.6px 5.4px;
+}
+
+.modalBody img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.modalBody form {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.modalBody form .photoForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	border: none;
+	padding: 0;
+	width: 420px;
+	background-color: #e8f1f6;
+}
+
+#logoIMG {
+	width: 68.14px;
+	height: 59.62px;
+	padding-top: 20px;
+}
+
+#previsuImg {
+	height: 169px;
+	width: 129px;
+}
+
+.modalBody form .photoForm button {
+	height: 36px;
+	width: 173px;
+	border-radius: 200px;
+	background-color: #CBD6DC;
+	margin: 0;
+	color: #306685;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.modalBody form .photoForm p {
+	font-size: 10px;
+	font-weight: 400;
+	margin: 0;
+	padding-bottom: 20px;
+}
+
+.modalBody form .photoForm input[type=file] {
+	height: 36px;
+	width: 173px;
+	border-radius: 200px;
+}
+
+.modalBody form .photoForm input[type=file]::file-selector-button {
+	height: 36px;
+	width: 173px;
+	border: none;
+	border-radius: 200px;
+	background-color: #CBD6DC;
+}
+
+.modalBody form label {
+	margin: 30px 0 10px 0;
+}
+
+input[type="radio" i] {
+	margin: 0;
+}
+
+.modalBody form input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.modalBody select {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.modalBody select option{
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.modalBody button {
+	font-family: 'Syne';
+	font-size: 14px;
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	height: 36px;
+	width: 238px;
+	text-align: center;
+	border-radius: 60px;
+	border: none;
+	margin: 38px 196px 45px 196px;
+	padding: 0;
+}
+
+.modalBody button:disabled {
+	background-color: #a7a7a7;
+}
+
+.entete {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 150px;
+}
+
+main {
+	margin: 0 245px;
+}
+
+section {
+	margin: 50px 0
+}
+
+.btns-tri {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 51px;
+}
+
+.btns-tri button {
+	color: #1D6154;
+	border-radius: 60px;
+	border: 1px #1D6154 solid;
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 16px;
+	background-color: #fffef8;
+	padding: 8px 12px;
+	min-width: 100px;
+}
+
+h1 {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1>span {
+	font-family: 'Work Sans';
+	font-size: 10px;
+	letter-spacing: 0.1em;
+}
+
+h2 {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+
+#introduction {
+	display: flex;
+	align-items: center;
+	gap: 72px;
+}
+
+#introduction img {
+	width: 474px;
+	height: 355px;
+}
+
+#introduction article {
+	flex: 1;
+}
+
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+
+#contact {
+	width: 50%;
+	margin: auto;
+}
+
+#contact>* {
+	text-align: center;
+
+}
+
+#contact h2 {
+	margin-bottom: 20px;
+}
+
+#contact form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#contact label {
+	margin: 2em 0 1em 0;
+}
+
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#accueil {
+	width: 50%;
+	margin: auto;
+}
+
+#accueil>* {
+	text-align: center;
+
+}
+
+#accueil h2 {
+	margin-bottom: 20px;
+}
+
+#accueil form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#accueil input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#accueil label {
+	margin: 2em 0 1em 0;
+}
+
+#accueil a {
+	font-family: 'Work Sans';
+	color: black;
+	text-decoration: underline;
+}
+
+form input[type="submit"] {
+	font-family: 'Syne';
+	font-size: 16px;
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin: 2em auto;
+	height: 36px;
+	width: 179px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+footer {
+	background-color: white;
+}
+
+footer nav ul {
+	font-family: 'Work Sans';
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em;
+}
